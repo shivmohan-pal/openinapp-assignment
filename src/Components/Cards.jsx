@@ -41,27 +41,27 @@ const ProfileCard = ({ name, phone, instagram, mail, youtube }) => {
             <span className="icon-back" style={{ background: "#E9F9EB" }}>
               <CallIcon />
             </span>
-            <span className="value">+91 {phone}</span>
+            <span className="value" title={`+91 ${phone}`}>+91 {phone}</span>
           </div>
           { instagram &&
           <div>
             <span className="icon-back" style={{ background: "#FFE9EC" }}>
               <InstagramIcon />
             </span>
-            <span className="value">{instagram}</span>
+            <span className="value" title={instagram}>{instagram}</span>
           </div>}
           <div>
             <span className="icon-back" style={{ background: "#f3f1fb" }}>
               <MailIcon />
             </span>
-            <span className="value">{mail}</span>
+            <span className="value" title={mail}>{mail}</span>
           </div>
           { youtube &&
           <div>
             <span className="icon-back" style={{ background: "#FFE9EC" }}>
               <YoutubeIcon />
             </span>
-            <span className="value">{youtube}</span>
+            <span className="value" title={youtube}>{youtube}</span>
           </div>
           }
         </div>

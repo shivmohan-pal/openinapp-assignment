@@ -178,6 +178,10 @@
     font-size: 0.875rem;
     font-weight: 400;
     color: var(--Light-Bulma);
+    width: 7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
 }
 
 .profile-card .icon-back {
@@ -194,6 +198,7 @@
     .add-profile-card, .top-product-card,.profile-card{
      padding:1rem;
     }
+
 }
    
 @media screen and (max-width: 290px){
