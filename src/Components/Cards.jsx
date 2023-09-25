@@ -105,7 +105,7 @@ const TopProductCard = () => {
       </div>
       <div className="doughnut-chart-box">
         <div className="doughnut-chart">
-          <DoughnutChart Data ={chartData} />
+        {!data ? "loading..." :  <DoughnutChart Data ={chartData} />}
         </div>
         <div className="data-fields">
           <DataField background="var(--Light-Green)" title="No. of Supervisor" />

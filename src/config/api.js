@@ -7,8 +7,9 @@ export const Fetch = (url) =>{
   
     useEffect(() => {
       const dataFetch = async () => {
-        const fetchData = await (await fetch(url)).json();
-        setData(fetchData);
+        const fetchData = await fetch(url)
+         const dt = await fetchData.json();
+        setData(dt);
       };
   
       dataFetch();
