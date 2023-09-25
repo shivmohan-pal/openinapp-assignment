@@ -1,0 +1,148 @@
+.layout {
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap:2.5rem;
+
+    width: 100%;
+    height: 100%;
+    padding:2rem;
+    background-color: #F8FAFF;
+}
+.navbar {
+    grid-area: 1/1/8/2;
+}
+header {
+    grid-area: 1/2/2/7;
+}
+#main {
+    grid-area: 1/2/8/7;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+
+    padding:2rem 12px;
+    overflow-y: auto;
+}
+/* #main::-webkit-scrollbar {
+    width:6px;
+    height:100%;
+    background:lightgray;
+    border-radius:0.2rem;
+  } 
+#main::-webkit-scrollbar-thumb {
+ background:gray;
+ border-radius:0.2rem;
+}     */
+
+
+main {
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+header {
+    display:flex;
+    gap:1rem;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    /* flex:auto; */
+}
+header > div {
+    display:flex;
+    align-items: center;
+    gap:1rem;
+}
+header form {
+    background-color: white;
+    padding:0.25rem 2rem 0.25rem 1rem;
+    border-radius: 1rem;
+}
+header form:focus {
+    background-color: var(--field-color-darker);
+}
+header form :where(input,button) {
+    border:none;
+}
+header form input {
+    padding: 5px 2px;
+    font-family: 14px;
+    font-weight: 400;
+}
+header form input:focus {
+    outline:none;
+}
+header form button {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+}
+
+.cards {
+    display:grid;
+    gap:2rem;
+    grid-auto-flow: column;
+    grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );/*16.25rem */
+}
+
+@media screen and (max-width: 1125px){
+    .layout{
+    gap:1.5rem;
+    padding:1rem;
+    }
+   #main ,main{
+    gap:1rem;
+   }
+   #main {
+    padding:1rem 12px;
+   }
+   .cards {
+    gap:1rem;
+   }
+   }
+
+@media screen and (max-width: 947px){
+.cards {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+}
+
+@media screen and (max-width: 647px){
+    .layout {
+        display:flex;
+        flex-direction: column;
+
+        height: auto;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: normal;
+    }
+    header h2 {
+        align-self: flex-start;
+    }
+    header > div {
+        justify-content: space-between;
+    }
+    header form {
+        display: flex;
+    }
+    header :where(form,form input) {
+        flex:auto;
+    }
+
+    #main {
+        padding:4px;
+    }
+}

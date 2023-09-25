@@ -1,0 +1,67 @@
+.activities {
+   display: flex;
+   flex-direction: column;
+
+   position: relative;
+    height: 22.5rem;
+    background-color: white;
+    box-shadow:0 0 2px 2px #E0E0E0;
+    padding: 1.625rem;
+    border-radius: 1rem;
+}
+.activities h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.activities .period-datafield {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+/* .activities */
+ .period {
+    color:var(--Secondary-Text);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+.activities .datafields {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap:1rem;
+}
+.datafield{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.625rem;
+}
+.datafield .dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+}
+.datafield .title {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.activities .bar-chart {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+    width:100%;
+    height: calc(100% - 2.625rem);
+}
+.activities .bar-chart canvas {
+    position: relative;
+}
+
+@media screen and (max-width: 647px){
+    .activities {
+      padding:1rem;
+    }
+}
