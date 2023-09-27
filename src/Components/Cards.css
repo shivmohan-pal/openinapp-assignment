@@ -198,9 +198,22 @@
     .add-profile-card, .top-product-card,.profile-card{
      padding:1rem;
     }
-
+    .profile-card .contacts>div {
+        gap:0.25rem;
+    }
+    .profile-card .contacts .value {
+     width: auto;
+    }
 }
    
+@media screen and (max-width:420px) {
+    .profile-card .contacts .value {
+    width: auto;
+    }
+.profile-card .contacts {
+ grid-template-columns: 1fr;
+}
+}
 @media screen and (max-width: 290px){
     .top-product-card .doughnut-chart-box .doughnut-chart{
         width: 10rem;
