@@ -44,7 +44,7 @@ const BasicForm = ({display,onChange,inputValue }) => {
         placeholder="Eg. John Doe"
         required={true}
         value={name}
-        pattern="^(\w\w+)\s(\w+)$"
+        pattern="^[a-zA-Z\s]*$"
         onChange={handleChange}
       />
       <InputField
@@ -62,7 +62,7 @@ const BasicForm = ({display,onChange,inputValue }) => {
         label="Enter Phone*"
         placeholder="Eg. 9123835284"
         required={true}
-        pattern="[1-9]{1}[0-9]{9}"
+        pattern="(\+([0-9]{1})?[0-9]{1})?[1-9]{1}[0-9]{9}"
         value={phone}
         onChange={handleChange}
       />

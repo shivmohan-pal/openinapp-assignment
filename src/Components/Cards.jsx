@@ -41,7 +41,7 @@ const ProfileCard = ({ name, phone, instagram, mail, youtube }) => {
             <span className="icon-back" style={{ background: "#E9F9EB" }}>
               <CallIcon />
             </span>
-            <span className="value" title={`+91 ${phone}`}>+91 {phone}</span>
+            <span className="value" title={phone}>{phone}</span>
           </div>
           { instagram &&
           <div>
