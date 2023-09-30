@@ -7,9 +7,14 @@ export const Fetch = (url) =>{
   
     useEffect(() => {
       const dataFetch = async () => {
-        const fetchData = await fetch(url)
-         const dt = await fetchData.json();
-        setData(dt);
+        try {
+        const fetchData = await (await fetch(url)).json();
+        setData(fetchData);
+        }
+        catch(e) {
+          // console.log(e.type)
+          console.log('Not connected to internet')
+        }
       };
   
       dataFetch();

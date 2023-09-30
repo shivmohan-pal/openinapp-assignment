@@ -107,14 +107,15 @@ header form button {
    .cards {
     gap:1rem;
    }
-   }
-
-@media screen and (max-width: 947px){
-.cards {
+   .cards {
     grid-auto-flow: row;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 }
+   }
+
+@media screen and (max-width: 947px){
+
 }
 
 @media screen and (max-width: 647px){

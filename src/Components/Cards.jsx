@@ -48,7 +48,7 @@ const ProfileCard = ({ name, phone, instagram, mail, youtube }) => {
             <span className="icon-back" style={{ background: "#FFE9EC" }}>
               <InstagramIcon />
             </span>
-            <span className="value" title={instagram}>{instagram}</span>
+            <span className="value" title={instagram}>{'@'+instagram.split('/')[instagram.split('/').length-1]}</span>
           </div>}
           <div>
             <span className="icon-back" style={{ background: "#f3f1fb" }}>
@@ -61,7 +61,7 @@ const ProfileCard = ({ name, phone, instagram, mail, youtube }) => {
             <span className="icon-back" style={{ background: "#FFE9EC" }}>
               <YoutubeIcon />
             </span>
-            <span className="value" title={youtube}>{youtube}</span>
+            <span className="value" title={youtube}>{'@'+youtube.split('/')[youtube.split('/').length-1]}</span>
           </div>
           }
         </div>
